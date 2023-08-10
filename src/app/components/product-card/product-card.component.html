@@ -1,0 +1,7 @@
+<mat-card class="product-card" appearance="raised" *ngFor="let product of products">
+  <img class="image">
+  <span class="name">{{product.name}}</span>
+  <span class="description">{{product.description}}</span>
+  <span class="price">{{product.price | currency:'IDR':'symbol-narrow':'1.0-0'}}</span>
+  <button class="buy-button" mat-button>Buy</button>
+</mat-card>

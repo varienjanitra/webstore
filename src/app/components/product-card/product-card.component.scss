@@ -1,0 +1,53 @@
+// Set of CSS rule that makes overflowing text hidden as ellipsis
+// Beware that these rules shall be applied together, else the truncation wont work
+@mixin rule-truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  rule-truncate-text: ellipsis;
+}
+
+@mixin spacing-element-text {
+  margin: 0.25rem 0rem;
+}
+
+:host {
+  padding: 0rem 0.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+.image {
+  min-width: 100px;
+  min-height: 200px;
+  border: 1px solid black;
+  border-radius: inherit;
+  margin-bottom: 1rem;
+}
+
+.name {
+  @include rule-truncate-text;
+  @include spacing-element-text;
+  font-size: larger;
+}
+
+.description {
+  @include rule-truncate-text;
+  @include spacing-element-text;
+}
+
+.price {
+  @include rule-truncate-text;
+  @include spacing-element-text;
+}
+
+.buy-button {
+  margin-top: 1rem;
+}

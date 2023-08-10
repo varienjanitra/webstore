@@ -1,0 +1,14 @@
+@import 'src/app/app.component.scss';
+
+.sale-announcement {
+  @include std-container-spacing;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+}
